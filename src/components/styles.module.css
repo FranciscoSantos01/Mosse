@@ -1,0 +1,20 @@
+
+
+
+.up{
+    display: none;
+}
+.arrow:active{
+    display: none;
+}
+.arrow:active .up & #dropdown-example{
+    display: block;
+}
+
+up:active{
+    display: none;
+}
+up:active .arrow & #dropdown-example{
+    display: block;
+}
+

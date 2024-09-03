@@ -1,0 +1,37 @@
+---
+import ProductLayout from "../components/Layout/ProductLayout";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Laboratorio">
+   <ProductLayout client:only>
+        <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#" class="container " >
+                <img class="rounded-t-lg" src="https://mauriciomosse.com.ar/wp-content/uploads/2022/11/contador-XS-20-WIENER.jpg" alt="" />
+                <img class="fig rounded-t-lg absolute top-0 bottom-0 left-10 right-0 object-cover opacity-0 transition-opacity" src="https://mauriciomosse.com.ar/wp-content/uploads/2022/11/CONTADOR-HEMATOLOGICO-COUNTER-29-MARCA-WIENER.jpg" alt="" />
+            </a>
+            <div class="p-5 flex flex-col items-center gap-3">
+                <h5 class="mb-2 text-2xl max-w-[370px] font-bold tracking-tight text-center text-gray-900 dark:text-white">Contador hematológico XS20 marca Wiener</h5>
+                <p class="mb-3 font-light text-gray-400 text-center dark:text-gray-400  text-balance">Detalle de información de las muestras jamás visto en un analizador de 3 partes bidireccional.
+                    Proporciona información útil para el diagnóstico, que incluye detección de WBC, detección de RBC y detección de PLT.</p>
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:bg-transparent hover:text-blue-500 hover:border hover:border-blue-500">
+                    Ver PDF
+                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+   </ProductLayout>
+</Layout>
+<style>
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+   .container:hover .fig{
+         opacity: 1;
+   }
+</style>

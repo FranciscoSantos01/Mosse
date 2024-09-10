@@ -1,11 +1,12 @@
 ---
 import ProductLayout from "../components/Layout/ProductLayout";
+import { ProductContainer } from "../components/ProductContainer";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Laboratorio">
    <ProductLayout client:only>
-        <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <!-- <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#" class="container " >
                 <img class="rounded-t-lg" src="https://mauriciomosse.com.ar/wp-content/uploads/2022/11/contador-XS-20-WIENER.jpg" alt="" />
                 <img class="fig rounded-t-lg absolute top-0 bottom-0 left-10 right-0 object-cover opacity-0 transition-opacity" src="https://mauriciomosse.com.ar/wp-content/uploads/2022/11/CONTADOR-HEMATOLOGICO-COUNTER-29-MARCA-WIENER.jpg" alt="" />
@@ -21,7 +22,8 @@ import Layout from "../layouts/Layout.astro";
                     </svg>
                 </a>
             </div>
-        </div>
+        </div> -->
+        <ProductContainer client:load /> 
    </ProductLayout>
 </Layout>
 <style>

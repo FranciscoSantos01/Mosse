@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro"
+import ProductLayout from "../components/Layout/ProductLayout"
+import { ProductContainer } from "../components/ProductContainer"
+---
+
+
+<Layout title="Medicina del Hogar">
+    <ProductLayout client:only>
+        <ProductContainer client:only />
+    </ProductLayout>
+ </Layout>

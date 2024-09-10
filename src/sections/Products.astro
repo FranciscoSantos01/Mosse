@@ -35,33 +35,19 @@ const features:Features[] = [
 
 <section class="py-14 mt-10">
     <h2 class="mb-10 text-blue-900 pl-4 text-3xl font-extrabold leading-none tracking-tight  md:text-4xl dark:text-white">Nuestros Productos</h2>
-    <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 ">
-        <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="space-y-8 px-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
             {
                 features.map((item, idx) => (
-                    <li  class="flex gap-x-4  card">
-                        <div class="flex-none w-12 h-12 bg-indigo-600 text-white rounded-lg flex items-center justify-center">
-                            <img src={item.icon.src} alt="">
-                        </div>
-                        <div class="space-y-3">
-                            <h4 class="text-lg text-gray-800 font-semibold">
-                                {item.title}
-                            </h4>
-                            <p>
-                                {item.desc}
-                            </p>
-                            <a  href={item.href} class="text-sm link text-indigo-600 duration-150 hover:text-indigo-400 font-medium inline-flex items-center gap-x-1">
-                                Learn more
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z" clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </li>
+                <a href={item.title === "Medicina del Hogar" ? "/Medicina-del-Hogar" :`/${item}`} class="hover:shadow-lg p-3 rounded-lg ">
+                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-200 lg:h-12 lg:w-12 dark:bg-primary-900">
+                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <h3 class="mb-2 text-xl text-blue-900 font-bold dark:text-white">{item.title}</h3>
+                <p class="text-gray-500 dark:text-gray-400">{item.desc}</p>
+               </a>
                 ))
             }
-        </ul>
-    </div>
+        </div>
 </section>
 
 <style>

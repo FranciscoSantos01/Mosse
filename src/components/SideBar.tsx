@@ -51,7 +51,7 @@ export const SideBar = () => {
    </svg>
 </button>
 
-<aside id="sidebar-multi-level-sidebar" style={{scrollbarWidth:"none"}}   className={`absolute left-0 z-40 w-72 h-dvh bg-white-50 dark:bg-gray-800 transition-transform 
+<aside id="sidebar-multi-level-sidebar" style={{scrollbarWidth:"none"}}   className={`absolute top-auto left-0 z-40 w-72 h-dvh bg-white-50 dark:bg-gray-800 transition-transform 
    ${isOpen ? "translate-x-0 mt-4" : "-translate-x-full"} 
    md:translate-x-0 md:block lg:block `}  aria-label="Sidebar">
    <div className="h-full px-3 py-4 overflow-y-auto bg-white dark:bg-gray-800">
